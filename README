@@ -1,0 +1,390 @@
+==========================================================================
+CBofN C Source v2.1 --- Copyright (c) 1995--1998 --- by Gary William Flake
+==========================================================================
+
+This is the README file for the example source code distribution from my
+book ``The Computational Beauty of Nature,'' hereafter abbreviated as
+CBofN.  As a shameless sales plug, CBofN is about how nature can be
+appreciated in terms of simple computational processes.  The book is in
+five parts (Computation, Fractals, Chaos, Complex Systems, and Adaptation)
+and explains each topic in terms of the others.  The source code in this
+distribution contains many simple example programs of each topic.  Unlike
+most other books dealing with these topics, every single image contained in
+CBofN can be duplicated by the reader with these programs.
+
+All of the code is written in C and should compile on most any platform.  I
+have personally compiled it under Solaris, Linux, and Windows 98.  Each
+program is command-line driven, so you only need to compile the program
+once to do 99.9% of what they can do.  You may also find the programs
+surprisingly powerful given their relatively small sizes.  Moreover, all of
+the examples are verbosely documented, so they should be easy to modify.
+In fact, the man pages are automagically generated from the C source files
+with a Perl script.
+
+You may use the source code for any purpose according to the standard GNU
+"copyleft" agreement (also contained in this distribution) as long as you
+neither remove nor modify my comments in the code.  Anything else goes.  Of
+course, there is no warranty for the code, so if your computer reaches some
+sort of semi-conscious state, it ain't my fault.
+
+This README is divided into three more sections.  The first section has
+information on how to get a pristine copy of the software distribution as
+well as how to get a copy of CBofN.  The second section contains a brief
+summary of all of the programs organized by the book part from which the
+examples come from.  The final section explains some of the programming
+issues involved in producing these examples and will give you some hints if
+you want to expand on the programs.
+
+NEWS:  Look in cbn/code/cbn98/README in the distribution for information 
+specific to the Windows port.
+
+Enjoy!  -- GWF
+
+
+============================================
+Getting the Source Code of CBofN (and CBofN)
+============================================
+
+The home website for CBofN is located at
+
+  http://mitpress.mit.edu/flake/
+
+Inside the main page there is a link leading to the source code section.
+Follow this link.  In the the source code section there are many options
+for downloading various source code distributions and precompiled binaries.
+
+To get a copy of CBofN, check out the ordering information section from
+the URL above.
+
+
+================
+Program Overview
+================
+
+Programs that have graphical output can produce either raw points,
+PostScript, PPM, or plot to an X window, Linux VGA, Windows, or Mac
+device.  See the ``Programming Issues'' for how the plotting methods
+can be expanded.
+
+Computation
+-----------
+
+ * STUTTER - a simple lisp interpreter that only understands car, cdr,
+   cons, if, set, equal, quote, and lambda, but is still Turing-complete.
+   Uses stop-and-copy garbage collection and has an adjustable heap size.
+   Examples that implement integer and floating-point arithmetic are
+   provided.  There is even an example STUTTER function to compute the
+   square root of a floating-point argument with nothing but the primitives
+   listed above.
+
+
+Fractals
+--------
+
+ * DIFFUSE - diffussion limited aggregate growth that looks like coral.
+
+ * LSYS - builds L-systems fractals.  Accepts multiple rules so that
+   complicated fractals (such as a Penrose tiling) can be expressed.  Great
+   for generating plant-like fractals.
+
+ * MRCM - uses the Multiple Reduction Copy Machine algorithm to generate
+   affine fractals.  Excepts an arbitrary number of transformations.  Good
+   for making snowflakes and mosaic patterns.
+
+ * IFS - similar to MRCM but uses Iterated Function Systems for finer
+   granularity.
+
+ * MANDEL - plot the famous Mandelbrot set.  There are options for the
+   displayed coordinates, zoom level, coloring schemes, etc.
+
+ * JULIA - generates Julia sets, which are related to the Mandelbrot set
+   and has options similar to MANDEL.
+
+
+Chaos
+-----
+
+ * GEN1D - generate a time series from a one-dimensional map.  Nothing
+   fancy; it just shows how chaos can be seen in simple systems.
+
+ * BIFUR1D - plot a bifurcation diagram for a one-dimensional map to
+   illustrate how a change in a single parameter can move a system from
+   fixed-point behavior, to periodic, and finally to chaos.  Different
+   regions can be zoomed in on.
+
+ * PHASE1D - plot the phase-space and trajectories of a one-dimensional
+   map.  Showing trajectories in the phase space more clearly illustrates
+   why fixed-points and limit cycles occur.  This can also be used to show
+   the exponential divergence of nearby trajectories.
+
+ * HENON - plot the phase space of the Henon map, a two-dimensional system
+   with a fractal shape.  Different regions can be zoomed in on.
+
+ * HENBIF - plot a bifurcation diagram for the Henon system.  This is
+   similar to BIFUR1D but shows that bifurcations apply to multidimensional
+   systems as well.
+
+ * HENWARP - takes a square of a specified area and ``warps'' it a fixed
+   number of times by the Henon system.  This illustrates the stretching
+   and folding motion of chaotic systems as well as shows how points within
+   an attractor's basin of attraction are eventually forced into a strange
+   attractor.
+
+ * LORENZ - plot the phase space of the Lorenz system, a three-dimensional
+   system described by differential equations with a fractal shape.  Both
+   plain state space plots and delayed state space plots are possible.
+
+ * MG -plot a two-dimensional embedding of the phase space of the
+   Mackey-Glass system, a delay differential system, with arbitrary
+   parameters.
+
+ * ROSSLER - similar to LORENZ, but uses the Rossler system.
+
+ * GSW - the time evolution of an individual-based three species
+   predator-prey ecosystem is simulated according to the specified
+   parameters.  The three species consist of plants, herbivores, and
+   carnivores (grass, sheep, and wolves; hence the name GSW).  Updates are
+   done synchronously, and each species has several parameters which can
+   control the life cycle, from the ability to give birth, to the
+   likelihood of starvation.  Population statistics of the three species
+   can be calculated over a subset of the entire grid.
+
+ * PREDPREY - plot the phase space of a three species predator-prey system,
+   a three-dimensional system described by differential equations and with
+   a fractal shape.  Both plain state space plots and delayed state space
+   plots are possible.
+
+ * LOTKA - integrate the two-species Lotka-Volterra predator-prey system
+   with the second-order Euler's method.  This program serves as a simple
+   introduction to differential equations.
+
+ * HENCON - control the Henon system with the OGY control law for arbitrary
+   choices of the system parameters.  The control law is analytically
+   calculated based on the system parameters.  The user can select times in
+   which control is turned on and off so that time-to-control and
+   transients can be observed.  Gaussian noise can also be injected into
+   the system.
+
+
+Complex Systems
+---------------
+
+ * CA - simulate arbitrary one-dimensional cellular automata with an
+   arbitrary choice of simulation parameters.  Random rules can be
+   generated and used with a desired lambda value.
+
+ * LIFE - simulate Conway's Game of Life with an arbitrary set of initial
+   conditions.  Input files need to be in the PBM file format.
+
+ * HP - simulate and plot the time evolution of the hodgepodge machine
+   according to specified parameters.  With a proper choice of parameters,
+   this system resembles the Belousov-Zhabotinsky reaction which forms
+   self-perpetuating spirals in a lattice.
+
+ * TERMITES - Simulate a population of termites which do a random walk
+   while possibly carrying a wood chip.  Under normal circumstances, the
+   termites will self-organize and move the wood chips into piles without a
+   global leader.  The termites' behavior is dictated by the following set
+   of rules: If a termite is not carrying anything and she bumps into a
+   chip, then she picks it up, reverses direction, and continues with the
+   random walk.  If she is carrying a chip and bumps into another, she
+   drops her chip, turns around, and starts walking again.  Otherwise, she
+   just does a random walk whether she is carrying a chip or not.
+
+ * VANTS - simulate and plot a population of generalized virtual ants
+   (vants).  The behavior of the vants is determined by a bit string with
+   length equal to the number of states that each cell in the vants' grid
+   world can take.  If a vant walks on a cell in state S, then the vant
+   turns right if the S'th bit of the rule string is 1 and left if it's 0.
+   As it leaves the cell the vant changes the state of the old cell to (S +
+   1) % (number of states).
+
+ * BOIDS - simulate a flock of boids according to rules that determine
+   their individual behaviors as well as the ``physics'' of their universe.
+   A boid greedily attempts to apply four rules with respect to its
+   neighbors: it wants to fly in the same direction, be in the center of
+   the local cluster of boids, avoid collisions with boids too close, and
+   maintain a clear view ahead by skirting around others that block its
+   view.  Changing these rules can make the boids behave like birds, gnats,
+   bees, fish, or magnetic particles.  See the RULES section of the manual
+   pages for more details.
+
+ * SIPD - the spatial iterated Prisoner's Dilemma is simulated and plotted
+   over time according to the specified parameters.  Each cell in a grid
+   plays a specific strategy against its eight neighbors for several
+   rounds.  At the end of the last round, each cell copies the strategy of
+   its most succesful neighbor, which is then used for the next time step.
+   Possible strategies include 'Always Cooperate,' 'Always Defect,'
+   'Random,' 'Pavlov,' and 'Tit-for-Tat.'
+
+ * EIPD - the ecological iterated Prisoner's Dilemma is simulated over time
+   according to the specified parameters.  At every time step the
+   population of each strategy is calculated as a function of the expected
+   scores earned against all strategies weighted by the populations of the
+   opponents.  Possible strategies include 'Always Cooperate,' 'Always
+   Defect,' 'Random,' 'Pavlov,' and 'Tit-for-Tat.'
+
+ * ASSOC - attempt to reconstruct a potentially corrupted image with a
+   McCulloch-Pitts feedback neural network that acts as an associative
+   memory.  The weights of the network are determined via Hebb's rule after
+   reading in multiple patterns.  Weights can be pruned either by size,
+   locality, or randomly.
+
+ * HOPFIELD - solve a task assignment problem via a Hopfield neural network
+   while plotting the activations of the neurons over time.  The program
+   uses the K-out-of-N rule for setting the external inputs and synapse
+   strength of the neurons.
+
+
+Adaptation
+----------
+
+ * GASTRING - use a genetic algorithm to breed strings that match a
+   user-specified target string.  This program illustrates how GAs can
+   perform a type of stochastic search in a space of discrete objects.
+   Reproduction of strings entails crossover and mutation with strings
+   being selected based on fitness.
+
+ * GABUMP - use a genetic algorithm to find the maximum of a single-humped
+   function that is centered at a user-specified location.  This program
+   serves as an example of how GAs can be used to optimize functions which
+   take a floating point argument.  Reproduction of strings entails
+   crossover and mutation with strings being selected based on fitness.
+
+ * GASURF - use a genetic algorithm to find the maximum of a multi-humped
+   function.  This program serves as an example of how GAs can be used to
+   optimize function which take a multiple floating point arguments.
+   Reproduction of strings entails crossover and mutation with strings
+   being selected based on fitness.
+
+ * GATASK - use a genetic algorithm to solve a task assignment problem with
+   user-specified costs.  This program illustrates how GAs can perform
+   combinatorial optimization.  Reproduction of strings entails special
+   crossover and mutation operations which preserve constraints on the form
+   of feasible solutions with strings being selected based on fitness.
+
+ * GAIPD - use a genetic algorithm to evolve IPD strategies according to
+   user-specified constraints.  This program illustrates how GAs can
+   demonstrate co-evolution since IPD strategies can only be successful
+   within the context of their likely opponents.  Reproduction of
+   strategies entails crossover and mutation with strategies being selected
+   based on fitness.
+
+ * ZCS - train a zeroth level classifier system (ZCS) to traverse a
+   two-dimensional terrain, avoid obstacles, and find food with the
+   implicit bucket brigade algorithm and a genetic algorithm.  At the
+   beginning of each step the ZCS is placed at a random location of it's
+   world.  It interacts with its environment until it finds food, which
+   yields a reward.  The simulation then restarts with the ZCS placed at a
+   new random location.  The progress of the ZCS is continuously plotted,
+   while the statistics on the time to find food are calculated and
+   displayed.  At the end of the simulation the classifiers that make up
+   the final ZCS are saved to a log file.
+
+ * ZCSCUP - train a zeroth level classifier system (ZCS) to solve the cups
+   problem with the implicit bucket brigade algorithm and a genetic
+   algorithm.  Solving this problem requires the ZCS to learn to remember
+   important features from previous states, which makes this problem very
+   challenging.  The ZCS always starts in the same initial position. It
+   interacts with its environment until it finds both cups, which (only at
+   that point) yields a reward.  The simulation then restarts with the ZCS
+   placed at the original location.  The progress of the ZCS is
+   continuously plotted, while the statistics on the time to find both cups
+   are calculated and displayed.  At the end of the simulation the
+   classifiers that make up the final ZCS are saved to a log file.
+
+ * MLP - train a multilayer perceptron with a single hidden layer of
+   neurons on a set of data contained in a file using the backpropagation
+   learning algorithm with momentum.  Output units can be linear or
+   sigmoidal, allowing you to model both discrete and continuous output
+   target values.
+
+
+==================
+Programming Issues
+==================
+
+This section briefly describes the programming philosophy that I've been
+operating under while producing this source code.  As such, the following
+is mostly irrelevant to the casual user, but may be helpful to those who
+wish to hack the code.
+
+My primary goal while producing this code has been to make it short and
+sweet.  I wanted each program to be comprehensible to others but to also
+illustrate something useful.  And since I wanted every image in my book to
+be reproducible by the reader, the programs had to be strong enough to do
+some non-trivial things.  With this in mind, what follows are the basic
+programming guidelines that I've followed.  Note that these are somewhat in
+conflict with what most professional hackers would consider good
+programming practices.  I make no apologies for having deviated from the
+usual heuristics other than to say that I had my reasons.
+
+  Input Interface - completely command-line driven with many options.
+  Thus, I have no GUIs to make the code non-portable.  The command-line
+  parser is easily understood by others and allows for long option names.
+  Thus, there is no need to link to third-party libraries.  Moreover, the
+  source code can be parsed by a Perl script to extract the options section
+  for man pages.
+
+  Output Interface - for graphics, I use a simple and generic plotting
+  interface that maps well into virtually any known plotting technology.
+  My plot routines only know how to plot dots and lines and to handle
+  simple scaling of coordinates and colors.  The flip side to this is that
+  adding drivers is simple.  Currently, I have drivers for X11, PostScript,
+  PGM, raw, Linux VGA, and Windows.  Non-graphical output usually goes to the
+  standard output.  In some cases, the reader may wish to use another
+  third-party program to plot the numerical output.
+
+  Globals - I use them to avoid excessive parameter passing.
+
+  Exception Handling - almost none.  If you give a command-line option a
+  nonsense value, a program may very well core dump.  So it goes.  Adding
+  nice error checks would have bloated the code considerably.
+
+  Documentation - self extracting and overly verbose.  All programs have a
+  detailed comment at the beginning that gives an overview of the code.
+  Every significant subroutine is documented.  I've also taken great pains
+  to explain any hackery that is non-trivial.  The man pages are generated
+  from a Perl script that grabs the initial header comment, the
+  command-line options structure, and the help string.  Moreover, the
+  header comment has a section entitled "NOTES" that does not appear in the
+  man page and only serves to help those perusing the source code.
+
+  Reuse - all programs link to a library named libmisc.a that contains
+  many routines that are used by multiple programs.  Included in this are
+  the plotting routines, the command-line parser, a simple text scanner
+  for parsing data files, code to read PBM files, and other miscellany.
+
+Modifying the code for your own use should be relatively easy.  Here are
+some examples of what you may wish to do:
+
+  1. Add a new plotting driver - See pgmplot.c or psplot.c for examples of
+     how to write the drivers.  You only need to define four functions
+     that initialize the driver, plot a point, plot a line, and finish the
+     plot.  Afterwards, the plot_init() function in plot.c needs to have a
+     little section of code added to tell the rest of the routines how to
+     access the new driver.
+
+  2. Add a feature - For example, you could add options to save and restore
+     network weights in mlp.c.  Use the scanning routines to parse the
+     output file.  Or, you could add another one-dimensional map to the
+     chaos programs.
+
+  3. Adapt the code - The source in zcscup.c is actually a modified version
+     of zcs.c altered for a very specific task.  You could similarly
+     modify other programs as well.
+
+  4. Experiment with variations - some of the programs are highly
+     experimental in that there are no "correct" implementations.  For
+     example, you could improve on gsw.c by adding some simple AI to the
+     animals.
+
+  5. Just use libmisc.a - you may also use the routines in the common
+     library for other tasks unrelated to the programs in this
+     distribution.
+
+Regardless of how deep you dive into the source code, I hope you enjoy the
+programs.  Happy hacking!  -- GWF
+
+==========================================================================
+
