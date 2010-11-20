@@ -1,0 +1,245 @@
+
+(set 'caar (lambda (x) (car (car x))))
+(set 'cadr (lambda (x) (car (cdr x))))
+(set 'cddr (lambda (x) (cdr (cdr x))))
+(set 'caaar (lambda (x) (car (car (car x)))))
+(set 'caadr (lambda (x) (car (car (cdr x)))))
+(set 'cadar (lambda (x) (car (cdr (car x)))))
+(set 'caddr (lambda (x) (car (cdr (cdr x)))))
+(set 'cdaar (lambda (x) (cdr (car (car x)))))
+(set 'cdadr (lambda (x) (cdr (car (cdr x)))))
+(set 'cddar (lambda (x) (cdr (cdr (car x)))))
+(set 'cdddr (lambda (x) (cdr (cdr (cdr x)))))
+
+
+(set '0 nil)
+(set 'i1+ (lambda (x) (cons t x)))
+(set 'i1- (lambda (x) (cdr x)))
+
+(set '1 (i1+ 0))
+(set '2 (i1+ 1))
+(set '3 (i1+ 2))
+(set '4 (i1+ 3))
+(set '5 (i1+ 4))
+(set '6 (i1+ 5))
+(set '7 (i1+ 6))
+(set '8 (i1+ 7))
+(set '9 (i1+ 8))
+(set '10 (i1+ 9))
+
+(set 'i& (lambda (x y) (if x (if y t))))
+(set 'i| (lambda (x y) (if x t (if y t))))
+(set 'i! (lambda (x) (if x nil t)))
+(set 'ixor (lambda (x y) (i| (i& x (i! y)) (i& (i! x) y))))
+
+(set 'i= (lambda (x y) (if (i& x y) (i= (i1- x) (i1- y)) (if (i| x y) nil t))))
+(set 'i< (lambda (x y) (if (i& x y) (i< (i1- x) (i1- y)) (if (i| x y) (if x nil t)) nil))) 
+(set 'i<= (lambda (x y) (i| (i= x y) (i< x y))))
+(set 'i> (lambda (x y) (i! (i<= x y))))
+(set 'i>= (lambda (x y) (i| (i= x y) (i> x y))))
+(set 'i+ (lambda (x y) (if y (i1+ (i+ x (i1- y))) x)))
+(set 'i- (lambda (x y) (if y (i1- (i- x (i1- y))) x)))
+(set 'i* (lambda (x y) (if y (i+ (i* x (i1- y)) x) 0)))
+(set 'i% (lambda (x y) (if (i> x y) (i% (i- x y) y) (if (i< x y) x 0))))
+(set 'i/ (lambda (x y) (if (i< x y) 0 (i1+ (i/ (i- x y) y)))))
+(set 'i^ (lambda (x y) (if y (i* x (i^ x (i1- y))) 1)))
+(set 'ilog (lambda (x y) (if (i>= x y) (i1+ (ilog (i/ x y) y)) 0)))
+(set 'igcd (lambda (x y) (if y (igcd y (i% x y)) x)))
+(set 'ifib (lambda (x) (if (i< x 2) x (i+ (ifib (i- x 2)) (ifib (i- x 1))))))
+
+(set 'append (lambda (x y) (if x (if y (cons (car x) (append (cdr x) y)) x) (if y y))))
+(set 'reverse (lambda (x) (if x (append (reverse (cdr x)) (cons (car x) nil)) nil)))
+(set 'length (lambda (x) (if x (i1+ (length (cdr x))) 0)))
+
+
+(set 'string->digit
+     (lambda (x)
+       (if (i= x 9) '(9)
+	 (if (i= x 8) '(8)
+	   (if (i= x 7) '(7)
+	     (if (i= x 6) '(6)
+	       (if (i= x 5) '(5)
+		 (if (i= x 4) '(4)
+		   (if (i= x 3) '(3)
+		     (if (i= x 2) '(2)
+		       (if (i= x 1) '(1) '(0))))))))))))
+
+
+(set 'digit->string
+     (lambda (x)
+       (if (equal x '9) 9
+	 (if (equal x '8) 8
+	   (if (equal x '7) 7
+	     (if (equal x '6) 6
+	       (if (equal x '5) 5
+		 (if (equal x '4) 4
+		   (if (equal x '3) 3
+		     (if (equal x '2) 2
+		       (if (equal x '1) 1 0)))))))))))
+
+(set 'string->list
+     (lambda (x) (if (> x 9)
+		     (append (string->list (i/ x 10)) (string->digit (i% x 10)))
+		   (string->digit x))))
+
+(set 'list->string
+     (lambda (x)
+       (if x
+	   (if (i= (length x) 1) (digit->string (car x))
+	     (i+ (digit->string (car (reverse x)))
+		 (i* 10 (list->string (reverse (cdr (reverse x)))))))
+	 nil)))
+
+
+;; Returns the integer portion of a float list, e.g.
+;; (1 2 3 . 4 5 6) -> (1 2 3)
+;;
+(set 'float-int
+     (lambda (x)
+       (if (equal (car x) '-) (float-int (cdr x))
+	 (if (equal (car x) '.) nil
+	   (cons (car x) (float-int (cdr x)))))))
+
+;; Returns the fraction portion of a float list, e.g.
+;; (1 2 3 . 4 5 6) -> (4 5 6)
+;;
+(set 'float-frac
+     (lambda (x)
+       (if (equal (car x) '.) (cdr x)
+	 (float-frac (cdr x)))))
+
+(set 'float-sign
+     (lambda (x) (equal (car x) '-)))
+
+(set '_clip-frac (lambda (x) (if (equal (car x) '0) (_clip-frac (cdr x)) x)))
+(set 'clip-frac (lambda (x) (reverse (_clip-frac (reverse x)))))
+
+(set 'prog9 (lambda (1 2 3 4 5 6 7 8 9) 9))
+
+(set 'list->float
+     (lambda (x int frac sgn num den gcd)
+       (prog9
+	(set 'int (list->string (float-int x)))
+	(set 'frac (list->string (float-frac x)))
+	(set 'sgn (float-sign x))
+	(set 'den (i^ 10 (length (float-frac x))))
+	(set 'num (i+ (i* int den) frac))
+	(set 'gcd (igcd num den))
+	(set 'den (i/ den gcd))
+	(set 'num (i/ num gcd))
+	(cons sgn (cons num (cons den nil)))
+)))
+
+(set 'float list->float)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(set '=
+     (lambda (x y)
+       (i&
+	(i! (ixor (car x) (car y))) ;;; signs are the same
+	(i&
+	 (i= (car (cdr x)) (car (cdr y))) ;;; numer is the same
+	 (i= (car (cdr (cdr x))) (car (cdr (cdr y)))) ;;; denom is the same
+	 ))))
+
+(set '_<
+     (lambda (x y)
+       (i< (i* (cadr x) (caddr y)) (i* (cadr y) (caddr x)))))
+
+(set '<
+     (lambda (x y)
+       (if (i& (car x) (i! (car y))) t      ;;; x<0, y>0
+	 (if (i& (i! (car x)) (car y)) nil  ;;; x>0, y<0
+	   (if (car x)
+	       (i! (_<                      ;;; x<0, y<0
+		    (cons nil (cons (cadr x) (cons (caddr x) nil)))
+		    (cons nil (cons (cadr y) (cons (caddr y) nil)))
+		    ))
+	       (_<                          ;;; x>0, y>0
+		(cons nil (cons (cadr x) (cons (caddr x) nil)))
+		(cons nil (cons (cadr y) (cons (caddr y) nil)))
+		)
+	       )))))
+
+(set '<= (lambda (x y) (i| (= x y) (< x y))))
+(set '> (lambda (x y) (i! (<= x y))))
+(set '>= (lambda (x y) (i! (< x y))))
+
+(set '+-
+     (lambda (x y op a b c d ad+cb bd gcd)
+       ((lambda (1 2 3 4 5 6 7 8) 8)
+	(set 'a (cadr x))
+	(set 'b (caddr x))
+	(set 'c (cadr y))
+	(set 'd (caddr y))
+	(set 'ad+cb (if (equal op '+)
+			(i+ (i* a d) (i* c b))
+			(i- (i* a d) (i* c b))))
+	(set 'bd (i* b d))
+	(set 'gcd (igcd ad+cb bd))
+	(cons nil (cons (i/ ad+cb gcd) (cons (i/ bd gcd) nil)))
+	)))
+
+(set '0.0 '(nil nil (t)))
+(set '>=0 (lambda (x) (>= x 0.0)))
+(set '<0 (lambda (x) (< x 0.0)))
+
+(set 'abs (lambda (x) (cons nil (cons (cadr x) (cons (caddr x) nil)))))
+(set '*-1 (lambda (x)
+	    (if (i= (cadr x) 0) x
+	      (cons (i! (car x)) (cons (cadr x) (cons (caddr x) nil))))))
+
+(set '+
+     (lambda (x y)
+       (if (i& (>=0 x) (>=0 y)) (+- x y '+)
+	 (if (i& (<0 x) (<0 y)) (*-1 (+- x y '+))
+	   (if (i& (<0 x) (>= (abs x) (abs y)))
+	       (*-1 (+- x y '-))
+	     (if (i& (>=0 x) (>= (abs x) (abs y)))
+		 (+- x y '-)
+	       (if (<0 y) (*-1 (+- y x '-))
+		 (+- y x '-)
+		 )))))))
+
+(set '- (lambda (x y) (+ x (*-1 y))))
+
+(set '*
+     (lambda (x y ac bd gcd)
+       ((lambda (1 2 3 4) 4)
+	(set 'ac (i* (cadr x) (cadr y)))
+	(set 'bd (i* (caddr x) (caddr y)))
+	(set 'gcd (igcd ac bd))
+	(cons (ixor (car x) (car y))
+	      (cons (i/ ac gcd) (cons (i/ bd gcd) nil)))
+	)))
+
+(set '^-1
+     (lambda (x)
+       (cons (car x) (cons (caddr x) (cons (cadr x) nil)))))
+
+(set '/ (lambda (x y) (* x (^-1 y))))
+
+(set 'newton-sqrt-step
+     (lambda (x xx)
+       (- x (/ (- (* x x) xx)
+	       (* x '(nil (t t) (t)))))))
+
+(set 'newton-sqrt
+     (lambda (x xx s)
+       (if s (newton-sqrt (newton-sqrt-step x xx) xx (i1- s))
+	 (newton-sqrt-step x xx))))
+
+;; should put search for closest integer solution
+(set 'sqrt-guess
+     (lambda (x) (+ (/ x '(nil (t t) (t))) '(nil (t) (t t t t)))))
+
+(set 'sqrt
+     (lambda (x)
+       (newton-sqrt (sqrt-guess x) x 1)))
+
+(newton-sqrt-step (sqrt-guess (float '(4 . 0))) (float '(4 . 0)))
+
+;(sqrt (float '(4 . 0)))
+
+

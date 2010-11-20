@@ -1,0 +1,28 @@
+--------------------Configuration: lotka - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\lotka\lotka.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/lotka.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/lotka.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/lotka.pdb" /machine:I386 /out:"Release/lotka.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP7041.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/lotka.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\lotka.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP7041.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSP7042.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/lotka.pdb" /machine:I386 /out:"Release/lotka.exe" 
+".\Release\lotka.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP7042.TMP" 
+Compiling...
+lotka.c
+C:\My Documents\cbn\code\src\lotka.c(104) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+lotka.exe - 0 error(s), 1 warning(s)

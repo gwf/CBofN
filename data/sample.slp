@@ -1,0 +1,30 @@
+'my-name-is-gary
+'(this is a better way of writing a string of text)
+'(here is a list (with a list (with a list) and another (list)))
+()
+nil
+this-is-an-unquoted-undefined-atom
+(choke on this list)
+;
+;
+;
+(set 'name 'gary)
+name
+(set 'ten '10)
+ten
+(set ten '5-plus-5)
+ten
+10
+;
+;
+;
+(car '((a b c) x y))
+(cdr '((a b c) x y))
+(car (car '((a b c) x y)))
+(cdr (cdr '((a b c) x y)))
+(car (cdr (cdr (car '((a b c) x y)))))
+(cons 'a nil)
+(cons 'a '(b))
+(cons '(a b c) '(x y))
+(cons '(a b c) nil)
+

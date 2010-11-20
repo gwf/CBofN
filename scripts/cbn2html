@@ -1,0 +1,267 @@
+#!/usr/bin/perl
+
+# Ugly perl script to convert the example source code from "The
+# Computational Beauty of Nature" to man pages.
+#
+# Written by Gary William Flake
+#
+# Permission granted for any use.  Knock yourself out.
+#
+######################################################################
+
+$cbn2man = "cbn2html";
+
+######################################################################
+
+# Returns the first location in a list of the occurance of a pattern.
+
+sub first_loc {
+  local($where);
+  local($pat, *array) = ($_[0], $_[1]);
+  undef $where;
+  for ($[ .. $#array) {
+    $where = $_, last if $array[$_] =~ /$pat/;
+  }
+  $where;
+}
+
+######################################################################
+
+sub first_loc_from {
+  local($where);
+  local($pat, $beg, *array) = ($_[0], $_[1], $_[2]);
+  undef $where;
+  for ($beg .. $#array) {
+    $where = $_, last if $array[$_] =~ /$pat/;
+  }
+  $where;
+}
+
+######################################################################
+
+# Grab each option from the options list and pretty print
+
+sub do_synopsis {
+  local($optname, $opttype);
+
+  print OUTFILE "<p><font size=+1><b>Synopsis</b></font>\n";
+  print OUTFILE "<blockquote>\n";
+  print OUTFILE "<b>$prog -help</b><br>\n";
+  print OUTFILE "&nbsp;&nbsp;or<br>\n";
+  print OUTFILE "<table border=0 cellspacing=0 cellpadding=0 ";
+  print OUTFILE "width=\"90%\">\n";
+  print OUTFILE "<tr valign=top><td><b>$prog&nbsp;</td><td>";
+  for(@opts) {
+    $optname = $_;
+    $optname =~ s/\s*\{\s*\"([^\"]*)\",\s*([^,]*).*/\1/g;
+    chop($optname);
+    $opttype = $_;
+    $opttype =~ s/\s*\{\s*\"([^\"]*)\",\s*([^,]*).*/\2/g;
+    chop($opttype);
+    $opttype =~ s/OPT_INT/<\/b><i>integer<\/i><b>/g;
+    $opttype =~ s/OPT_DOUBLE/<\/b><i>double<\/i><b>/g;
+    $opttype =~ s/OPT_STRING/<\/b><i>string<\/i><b>/g;
+    $opttype =~ s/OPT_SWITCH//g;
+    $opttype =~ s/OPT_OTHER/ .../g;
+    print OUTFILE "</b>[&nbsp;<b>$optname&nbsp;$opttype</b>&nbsp;]<b> \n";
+  }
+  print OUTFILE "</b></td></tr></table></blockquote></p>\n";
+}
+
+######################################################################
+
+# Grab the help string in print it as a description
+
+sub do_description {
+  local($beg, $end, @help);
+
+  $beg = &first_loc('char\s*help_string', *rest);
+  $end = &first_loc_from('\";', $beg + 1, *rest);
+  @help = @rest[$beg .. $end];
+  $help[0] =~ s/\s*char\s*help_string[^\"]*\"(.*)/\1/g;
+  $help[$#help] =~ s/([^\"]*)\".*/\1/g;
+  for (@help) {
+    s/\\$//g;
+  }
+  if($help[0] =~ /^\s*$/) {
+    @help = @help[1 .. $#help];
+  }
+  if($help[$#help] =~ /^\s*$/) {
+    @help = @help[0 .. $#help - 1];
+  }
+  print OUTFILE "<p><font size=+1><b>Description</b></font>\n";
+  print OUTFILE "<blockquote>\n";
+  print OUTFILE @help;
+  print OUTFILE "</blockquote></p>\n";
+}
+
+######################################################################
+
+# Pretty-print out each option description seperately.
+
+sub do_options {
+  local($optname, $opttype, $opthelp);
+
+  print OUTFILE "<p><font size=+1><b>Options</b></font>\n";
+  print OUTFILE "<blockquote>\n";
+  print OUTFILE "<table border=0 cellspacing=0 cellpadding=0 ";
+  print OUTFILE "width=\"90%\">\n";
+  for (@opts) {
+    $optname = $_;
+    $optname =~ s/\s*\{\s*\"([^\"]*)\",\s*([^,]*).*/\1/g;
+    chop($optname);
+
+    $opttype = $_;
+    $opttype =~ s/\s*\{\s*\"([^\"]*)\",\s*([^,]*).*/\2/g;
+    chop($opttype);
+    $opttype =~ s/OPT_INT/integer/g;
+    $opttype =~ s/OPT_DOUBLE/double/g;
+    $opttype =~ s/OPT_STRING/string/g;
+    $opttype =~ s/OPT_SWITCH//g;
+    $opttype =~ s/OPT_OTHER/.../g;
+    
+    $opthelp = $_; 
+    $opthelp =~ s/\s*\{\s*\"[^\"]*\"[^\"]*\"([^\"]*)\".*/\1/g;
+    print OUTFILE "<tr valign=top><td>\n";
+    print OUTFILE "<b>$optname</b> <i>$opttype</i>\n";
+    print OUTFILE "</td><td>\n";
+    print OUTFILE $opthelp;
+    print OUTFILE "</td></tr>\n";
+  }
+  print OUTFILE "</table></blockquote></p>\n";
+}
+
+######################################################################
+
+# Pretty-print any remaining section except NAME and NOTES.
+
+sub do_sections {
+  local($beg, $end, $skip);
+
+  $didone = 0;
+  $skip = 0;
+  for (@header) {
+    if($skip == 1) {
+      if(/^[A-Z][A-Z]*/) {
+	$skip = 0;
+      }
+    }
+    if(/^[A-Z][A-Z]*/) {
+      if(/^NAME/ || /^NOTES/) {
+	$skip = 1;
+      }
+      else {
+	tr/A-Z/a-z/;
+	s/\ba/A/g;
+	s/\bb/B/g;
+	s/\bc/C/g;
+	s/\bd/D/g;
+	s/\be/E/g;
+	s/\bf/F/g;
+	s/\bg/G/g;
+	s/\bh/H/g;
+	s/\bi/I/g;
+	s/\bj/J/g;
+	s/\bk/K/g;
+	s/\bl/L/g;
+	s/\bm/M/g;
+	s/\bn/N/g;
+	s/\bo/O/g;
+	s/\bp/P/g;
+	s/\bq/Q/g;
+	s/\br/R/g;
+	s/\bs/S/g;
+	s/\bt/T/g;
+	s/\bu/U/g;
+	s/\bv/V/g;
+	s/\bw/W/g;
+	s/\bx/X/g;
+	s/\by/Y/g;
+	s/\bz/Z/g;
+	if($didone == 1) {
+	  print OUTFILE "</blockquote>\n";
+	}
+	$didone = 1;
+	print OUTFILE "<p><font size=+1><b>$_</b></font>\n";
+	print OUTFILE "<blockquote>\n";
+      }
+    }
+    elsif ($skip == 0) {
+      s/^  //g;
+      print OUTFILE $_;
+    }
+  }
+  print OUTFILE "</blockquote>\n";
+}
+
+######################################################################
+
+sub main {
+
+  open(INFILE, "-");
+  open(OUTFILE, ">-");
+  
+  @lines = <INFILE>;
+  close(INFILE);
+
+  # Get the first header comment and clean it up.
+  $beg = &first_loc('^/\*', *lines);
+  $end = &first_loc_from('^ \*/', $beg + 1, *lines);
+  @header = @lines[$beg .. $end - 1];
+  $header[0] =~ s/^\/\* //g;
+  for (@header[1 .. $#header]) {
+    s/^ \* //g;
+  }
+  
+  # Get everything but the header;
+  @rest = @lines[$end + 1 .. $#lines];
+
+  # Get the program name and description.
+  $beg = &first_loc('^NAME', *header);
+  $progline = $header[$beg + 1];
+  $progline =~ s/ *([^ ].*)/\1/g;
+  $prog = $progline;
+  $prog =~ s/([^ ]*) .*/\1/g;
+  $bigprog = $prog;
+  $bigprog =~ tr/[a-z]/[A-Z]/;
+  $progline =~ s/-/ - /g;
+  chop($prog);
+  chop($bigprog);
+
+  # Isolate the command line options and strip preproccesor directives
+  $beg = &first_loc('^\s*OPTION', *rest);
+  $end = &first_loc_from('^\s*{\s*NULL,\s*OPT_NULL', $beg + 1, *rest);
+  @opts = @rest[$beg + 1 .. $end - 1];
+  for (@opts) {
+    s/^\s*#.*//g;
+  }
+  # Now, join continuation strings. 
+  chop @opts;
+  $opts = join('', @opts);
+  $opts =~ s/\"\s*\"//g;
+  @opts = split(/\},/, $opts);
+  for (@opts) {
+    $_ = "$_\n";
+  }
+
+  print OUTFILE "<html><head><title>test</title></head><body>\n";
+
+  &do_synopsis;
+  &do_description;
+  &do_options;
+  &do_sections;
+
+  print OUTFILE "</body></html>\n";
+
+  close(OUTFILE);
+}
+
+######################################################################
+
+# Is it obvious that I am a C programmer?
+
+&main;
+exit 0;
+
+######################################################################
+

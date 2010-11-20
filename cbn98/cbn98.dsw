@@ -1,0 +1,599 @@
+Microsoft Developer Studio Workspace File, Format Version 5.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "assoc"=".\assoc\assoc.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "bifur1d"=".\bifur1d\bifur1d.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "boids"=".\boids\boids.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ca"=".\ca\ca.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "diffuse"=".\diffuse\diffuse.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "eipd"=".\eipd\eipd.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "gabump"=".\gabump\gabump.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "gaipd"=".\gaipd\gaipd.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "gastring"=".\gastring\gastring.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "gasurf"=".\gasurf\gasurf.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "gatask"=".\gatask\gatask.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "gen1d"=".\gen1d\gen1d.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "gsw"=".\gsw\gsw.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "henbif"=".\henbif\henbif.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "hencon"=".\hencon\hencon.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "henon"=".\henon\henon.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "henwarp"=".\henwarp\henwarp.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "hopfield"=".\hopfield\hopfield.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "hp"=".\hp\hp.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ifs"=".\ifs\ifs.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "julia"=".\julia\julia.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "libmisc"=".\libmisc\libmisc.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "life"=".\life\life.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "lorenz"=".\lorenz\lorenz.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "lotka"=".\lotka\lotka.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "lsys"=".\lsys\lsys.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mandel"=".\mandel\mandel.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mg"=".\mg\mg.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mlp"=".\mlp\mlp.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mrcm"=".\mrcm\mrcm.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "phase1d"=".\phase1d\phase1d.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "predprey"=".\predprey\predprey.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "rossler"=".\rossler\rossler.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "sipd"=".\sipd\sipd.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "stutter"=".\stutter\stutter.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "termites"=".\termites\termites.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "vants"=".\vants\vants.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "zcs"=".\zcs\zcs.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "zcscup"=".\zcscup\zcscup.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libmisc
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

@@ -1,0 +1,1575 @@
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB0B3.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\misc.c"
+"C:\My Documents\cbn\code\src\pgmplot.c"
+"C:\My Documents\cbn\code\cbn98\libmisc\plot.cpp"
+"C:\My Documents\cbn\code\src\psplot.c"
+"C:\My Documents\cbn\code\src\rawplot.c"
+"C:\My Documents\cbn\code\src\winplot.cpp"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB0B3.TMP" 
+Creating command line "link.exe -lib /nologo /out:"Release\libmisc.lib"  ".\Release\misc.obj" ".\Release\pgmplot.obj" ".\Release\plot.obj" ".\Release\psplot.obj" ".\Release\rawplot.obj" ".\Release\winplot.obj"" 
+Compiling...
+misc.c
+pgmplot.c
+plot.cpp
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(186) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(187) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(198) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(199) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(200) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(201) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(227) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(227) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(238) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(239) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(240) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(241) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+psplot.c
+rawplot.c
+winplot.cpp
+Creating library...
+--------------------Configuration: assoc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\assoc\assoc.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/assoc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/assoc.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/assoc.pdb" /machine:I386 /out:"Release/assoc.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB185.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/assoc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\assoc.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB185.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB186.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/assoc.pdb" /machine:I386 /out:"Release/assoc.exe" 
+".\Release\assoc.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB186.TMP" 
+Compiling...
+assoc.c
+C:\My Documents\cbn\code\src\assoc.c(303) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+assoc.exe - 0 error(s), 13 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: bifur1d - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\bifur1d\bifur1d.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/bifur1d.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/bifur1d.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/bifur1d.pdb" /machine:I386 /out:"Release/bifur1d.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB1D4.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/bifur1d.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\bifur1d.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB1D4.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB1D5.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/bifur1d.pdb" /machine:I386 /out:"Release/bifur1d.exe" 
+".\Release\bifur1d.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB1D5.TMP" 
+Compiling...
+bifur1d.c
+C:\My Documents\cbn\code\src\bifur1d.c(147) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+bifur1d.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: boids - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\boids\boids.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/boids.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/boids.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/boids.pdb" /machine:I386 /out:"Release/boids.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB1F4.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/boids.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\boids.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB1F4.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB1F5.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/boids.pdb" /machine:I386 /out:"Release/boids.exe" 
+".\Release\boids.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB1F5.TMP" 
+Compiling...
+boids.c
+C:\My Documents\cbn\code\src\boids.c(426) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+boids.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: ca - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\ca\ca.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/ca.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/ca.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ca.pdb" /machine:I386 /out:"Release/ca.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB220.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/ca.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\ca.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB220.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB221.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ca.pdb" /machine:I386 /out:"Release/ca.exe" 
+".\Release\ca.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB221.TMP" 
+Compiling...
+ca.c
+C:\My Documents\cbn\code\src\ca.c(100) : warning C4018: '!=' : signed/unsigned mismatch
+C:\My Documents\cbn\code\src\ca.c(314) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+ca.exe - 0 error(s), 2 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: diffuse - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\diffuse\diffuse.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/diffuse.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/diffuse.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/diffuse.pdb" /machine:I386 /out:"Release/diffuse.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB242.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/diffuse.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\diffuse.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB242.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB243.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/diffuse.pdb" /machine:I386 /out:"Release/diffuse.exe" 
+".\Release\diffuse.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB243.TMP" 
+Compiling...
+diffuse.c
+C:\My Documents\cbn\code\src\diffuse.c(109) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\diffuse.c(110) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\diffuse.c(123) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\diffuse.c(124) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\diffuse.c(177) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\diffuse.c(178) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\diffuse.c(199) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+diffuse.exe - 0 error(s), 7 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: eipd - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\eipd\eipd.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/eipd.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/eipd.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/eipd.pdb" /machine:I386 /out:"Release/eipd.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB263.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/eipd.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\eipd.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB263.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB264.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/eipd.pdb" /machine:I386 /out:"Release/eipd.exe" 
+".\Release\eipd.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB264.TMP" 
+Compiling...
+eipd.c
+C:\My Documents\cbn\code\src\eipd.c(228) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+eipd.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: gabump - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\gabump\gabump.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gabump.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/gabump.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gabump.pdb" /machine:I386 /out:"Release/gabump.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB281.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gabump.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\gabump.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB281.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB282.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gabump.pdb" /machine:I386 /out:"Release/gabump.exe" 
+".\Release\gabump.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB282.TMP" 
+Compiling...
+gabump.c
+C:\My Documents\cbn\code\src\gabump.c(230) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+gabump.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: gaipd - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\gaipd\gaipd.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gaipd.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/gaipd.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gaipd.pdb" /machine:I386 /out:"Release/gaipd.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB2A0.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gaipd.pdb" /machine:I386 /out:"Release/gaipd.exe" 
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB2A0.TMP" 
+Linking...
+LINK : warning LNK4001: no object files specified; libraries used
+LINK : error LNK2001: unresolved external symbol _mainCRTStartup
+Release/gaipd.exe : fatal error LNK1120: 1 unresolved externals
+Error executing link.exe.
+
+
+
+gaipd.exe - 2 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: gastring - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\gastring\gastring.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gastring.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/gastring.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gastring.pdb" /machine:I386 /out:"Release/gastring.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB2A4.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gastring.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\gastring.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB2A4.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB2A5.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gastring.pdb" /machine:I386 /out:"Release/gastring.exe" 
+".\Release\gastring.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB2A5.TMP" 
+Compiling...
+gastring.c
+C:\My Documents\cbn\code\src\gastring.c(231) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+gastring.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: gasurf - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\gasurf\gasurf.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gasurf.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/gasurf.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gasurf.pdb" /machine:I386 /out:"Release/gasurf.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB2C0.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gasurf.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\gasurf.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB2C0.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB2C1.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gasurf.pdb" /machine:I386 /out:"Release/gasurf.exe" 
+".\Release\gasurf.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB2C1.TMP" 
+Compiling...
+gasurf.c
+C:\My Documents\cbn\code\src\gasurf.c(245) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+gasurf.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: gatask - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\gatask\gatask.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gatask.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/gatask.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gatask.pdb" /machine:I386 /out:"Release/gatask.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB2E2.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gatask.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\gatask.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB2E2.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB2E3.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gatask.pdb" /machine:I386 /out:"Release/gatask.exe" 
+".\Release\gatask.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB2E3.TMP" 
+Compiling...
+gatask.c
+C:\My Documents\cbn\code\src\gatask.c(143) : warning C4244: '+=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gatask.c(335) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+gatask.exe - 0 error(s), 2 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: gen1d - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\gen1d\gen1d.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gen1d.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/gen1d.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gen1d.pdb" /machine:I386 /out:"Release/gen1d.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB306.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gen1d.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\gen1d.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB306.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB307.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gen1d.pdb" /machine:I386 /out:"Release/gen1d.exe" 
+".\Release\gen1d.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB307.TMP" 
+Compiling...
+gen1d.c
+C:\My Documents\cbn\code\src\gen1d.c(83) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+gen1d.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: gsw - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\gsw\gsw.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/gsw.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/gsw.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/gsw.pdb" /machine:I386 /out:"Release/gsw.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB331.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/gsw.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\gsw.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB331.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB332.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/gsw.pdb" /machine:I386 /out:"Release/gsw.exe" 
+".\Release\gsw.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB332.TMP" 
+Compiling...
+gsw.c
+C:\My Documents\cbn\code\src\gsw.c(27) : warning C4056: overflow in floating-point constant arithmetic
+C:\My Documents\cbn\code\src\gsw.c(27) : warning C4244: 'initializing' : conversion from 'const double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(112) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(113) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(122) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(123) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(132) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(133) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(210) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(236) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(277) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(303) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(361) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(362) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(368) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(369) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gsw.c(385) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+gsw.exe - 0 error(s), 17 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: henbif - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\henbif\henbif.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/henbif.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/henbif.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/henbif.pdb" /machine:I386 /out:"Release/henbif.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB354.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/henbif.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\henbif.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB354.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB355.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/henbif.pdb" /machine:I386 /out:"Release/henbif.exe" 
+".\Release\henbif.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB355.TMP" 
+Compiling...
+henbif.c
+C:\My Documents\cbn\code\src\henbif.c(136) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+henbif.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: hencon - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\hencon\hencon.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/hencon.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/hencon.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/hencon.pdb" /machine:I386 /out:"Release/hencon.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB373.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/hencon.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\hencon.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB373.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB374.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/hencon.pdb" /machine:I386 /out:"Release/hencon.exe" 
+".\Release\hencon.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB374.TMP" 
+Compiling...
+hencon.c
+C:\My Documents\cbn\code\src\hencon.c(122) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+hencon.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: henon - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\henon\henon.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/henon.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/henon.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/henon.pdb" /machine:I386 /out:"Release/henon.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB390.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/henon.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\henon.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB390.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB391.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/henon.pdb" /machine:I386 /out:"Release/henon.exe" 
+".\Release\henon.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB391.TMP" 
+Compiling...
+henon.c
+C:\My Documents\cbn\code\src\henon.c(128) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+henon.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: henwarp - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\henwarp\henwarp.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/henwarp.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/henwarp.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/henwarp.pdb" /machine:I386 /out:"Release/henwarp.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB3A5.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/henwarp.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\henwarp.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB3A5.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB3A6.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/henwarp.pdb" /machine:I386 /out:"Release/henwarp.exe" 
+".\Release\henwarp.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB3A6.TMP" 
+Compiling...
+henwarp.c
+C:\My Documents\cbn\code\src\henwarp.c(125) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+henwarp.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: hopfield - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\hopfield\hopfield.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/hopfield.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/hopfield.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/hopfield.pdb" /machine:I386 /out:"Release/hopfield.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC004.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/hopfield.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\hopfield.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC004.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC005.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/hopfield.pdb" /machine:I386 /out:"Release/hopfield.exe" 
+".\Release\hopfield.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC005.TMP" 
+Compiling...
+hopfield.c
+C:\My Documents\cbn\code\src\hopfield.c(216) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+hopfield.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: hp - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\hp\hp.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/hp.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/hp.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/hp.pdb" /machine:I386 /out:"Release/hp.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC025.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/hp.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\hp.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC025.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC026.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/hp.pdb" /machine:I386 /out:"Release/hp.exe" 
+".\Release\hp.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC026.TMP" 
+Compiling...
+hp.c
+C:\My Documents\cbn\code\src\hp.c(133) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\hp.c(187) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+hp.exe - 0 error(s), 2 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: ifs - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\ifs\ifs.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/ifs.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/ifs.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ifs.pdb" /machine:I386 /out:"Release/ifs.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC050.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/ifs.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\ifs.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC050.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC051.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ifs.pdb" /machine:I386 /out:"Release/ifs.exe" 
+".\Release\ifs.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC051.TMP" 
+Compiling...
+ifs.c
+C:\My Documents\cbn\code\src\ifs.c(184) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\ifs.c(193) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+ifs.exe - 0 error(s), 2 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: julia - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\julia\julia.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/julia.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/julia.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/julia.pdb" /machine:I386 /out:"Release/julia.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC073.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/julia.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\julia.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC073.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC074.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/julia.pdb" /machine:I386 /out:"Release/julia.exe" 
+".\Release\julia.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC074.TMP" 
+Compiling...
+julia.c
+C:\My Documents\cbn\code\src\julia.c(148) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+julia.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: life - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\life\life.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/life.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/life.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/life.pdb" /machine:I386 /out:"Release/life.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC094.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/life.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\life.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC094.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC095.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/life.pdb" /machine:I386 /out:"Release/life.exe" 
+".\Release\life.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC095.TMP" 
+Compiling...
+life.c
+C:\My Documents\cbn\code\src\life.c(116) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\life.c(194) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+life.exe - 0 error(s), 2 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: lorenz - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\lorenz\lorenz.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/lorenz.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/lorenz.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/lorenz.pdb" /machine:I386 /out:"Release/lorenz.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC0B2.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/lorenz.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\lorenz.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC0B2.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC0B3.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/lorenz.pdb" /machine:I386 /out:"Release/lorenz.exe" 
+".\Release\lorenz.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC0B3.TMP" 
+Compiling...
+lorenz.c
+C:\My Documents\cbn\code\src\lorenz.c(257) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+lorenz.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: lotka - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\lotka\lotka.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/lotka.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/lotka.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/lotka.pdb" /machine:I386 /out:"Release/lotka.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC0D4.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/lotka.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\lotka.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC0D4.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC0D5.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/lotka.pdb" /machine:I386 /out:"Release/lotka.exe" 
+".\Release\lotka.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC0D5.TMP" 
+Compiling...
+lotka.c
+C:\My Documents\cbn\code\src\lotka.c(104) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+lotka.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: lsys - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\lsys\lsys.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/lsys.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/lsys.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/lsys.pdb" /machine:I386 /out:"Release/lsys.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC0F0.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/lsys.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\lsys.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC0F0.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC0F1.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/lsys.pdb" /machine:I386 /out:"Release/lsys.exe" 
+".\Release\lsys.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC0F1.TMP" 
+Compiling...
+lsys.c
+C:\My Documents\cbn\code\src\lsys.c(187) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\lsys.c(188) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\lsys.c(189) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\lsys.c(190) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\lsys.c(314) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+lsys.exe - 0 error(s), 5 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: mandel - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\mandel\mandel.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/mandel.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/mandel.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mandel.pdb" /machine:I386 /out:"Release/mandel.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC112.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/mandel.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\mandel.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC112.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC113.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mandel.pdb" /machine:I386 /out:"Release/mandel.exe" 
+".\Release\mandel.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC113.TMP" 
+Compiling...
+mandel.c
+C:\My Documents\cbn\code\src\mandel.c(144) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+mandel.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: mg - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\mg\mg.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/mg.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/mg.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mg.pdb" /machine:I386 /out:"Release/mg.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC130.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/mg.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\mg.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC130.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC131.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mg.pdb" /machine:I386 /out:"Release/mg.exe" 
+".\Release\mg.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC131.TMP" 
+Compiling...
+mg.c
+C:\My Documents\cbn\code\src\mg.c(100) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\mg.c(101) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\mg.c(163) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+mg.exe - 0 error(s), 3 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: mlp - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\mlp\mlp.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/mlp.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/mlp.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/mlp.pdb" /machine:I386 /out:"Release/mlp.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC143.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/mlp.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\mlp.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC143.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC144.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/mlp.pdb" /machine:I386 /out:"Release/mlp.exe" 
+".\Release\mlp.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC144.TMP" 
+Compiling...
+mlp.c
+C:\My Documents\cbn\code\src\mlp.c(421) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+mlp.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: mrcm - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\mrcm\mrcm.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/mrcm.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/mrcm.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mrcm.pdb" /machine:I386 /out:"Release/mrcm.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC161.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/mrcm.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\mrcm.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC161.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC162.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mrcm.pdb" /machine:I386 /out:"Release/mrcm.exe" 
+".\Release\mrcm.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC162.TMP" 
+Compiling...
+mrcm.c
+C:\My Documents\cbn\code\src\mrcm.c(154) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\mrcm.c(156) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\mrcm.c(165) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\mrcm.c(167) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\mrcm.c(218) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+mrcm.exe - 0 error(s), 5 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: phase1d - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\phase1d\phase1d.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/phase1d.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/phase1d.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/phase1d.pdb" /machine:I386 /out:"Release/phase1d.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC182.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/phase1d.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\phase1d.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC182.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC183.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/phase1d.pdb" /machine:I386 /out:"Release/phase1d.exe" 
+".\Release\phase1d.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC183.TMP" 
+Compiling...
+phase1d.c
+C:\My Documents\cbn\code\src\phase1d.c(176) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+phase1d.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: predprey - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\predprey\predprey.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/predprey.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/predprey.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/predprey.pdb" /machine:I386 /out:"Release/predprey.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC196.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/predprey.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\predprey.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC196.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC197.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/predprey.pdb" /machine:I386 /out:"Release/predprey.exe" 
+".\Release\predprey.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC197.TMP" 
+Compiling...
+predprey.c
+C:\My Documents\cbn\code\src\predprey.c(255) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+predprey.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: rossler - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\rossler\rossler.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/rossler.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/rossler.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/rossler.pdb" /machine:I386 /out:"Release/rossler.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC1C1.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/rossler.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\rossler.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC1C1.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC1C2.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/rossler.pdb" /machine:I386 /out:"Release/rossler.exe" 
+".\Release\rossler.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC1C2.TMP" 
+Compiling...
+rossler.c
+C:\My Documents\cbn\code\src\rossler.c(257) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+rossler.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: sipd - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\sipd\sipd.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/sipd.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/sipd.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/sipd.pdb" /machine:I386 /out:"Release/sipd.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC1D5.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/sipd.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\sipd.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC1D5.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC1D6.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/sipd.pdb" /machine:I386 /out:"Release/sipd.exe" 
+".\Release\sipd.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC1D6.TMP" 
+Compiling...
+sipd.c
+C:\My Documents\cbn\code\src\sipd.c(491) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+sipd.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: stutter - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\stutter\stutter.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/stutter.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /i "..\..\src" /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/stutter.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/stutter.pdb" /machine:I386 /out:"Release/stutter.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC200.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/stutter.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\stutter.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC200.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC201.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/stutter.pdb" /machine:I386 /out:"Release/stutter.exe" 
+".\Release\stutter.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC201.TMP" 
+Compiling...
+stutter.c
+C:\My Documents\cbn\code\src\stutter.c(739) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+stutter.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: termites - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\termites\termites.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/termites.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/termites.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/termites.pdb" /machine:I386 /out:"Release/termites.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC214.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/termites.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\termites.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC214.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC215.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/termites.pdb" /machine:I386 /out:"Release/termites.exe" 
+".\Release\termites.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC215.TMP" 
+Compiling...
+termites.c
+C:\My Documents\cbn\code\src\termites.c(156) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+termites.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: vants - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\vants\vants.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/vants.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/vants.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/vants.pdb" /machine:I386 /out:"Release/vants.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC234.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/vants.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\vants.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC234.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC235.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/vants.pdb" /machine:I386 /out:"Release/vants.exe" 
+".\Release\vants.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC235.TMP" 
+Compiling...
+vants.c
+C:\My Documents\cbn\code\src\vants.c(82) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\vants.c(83) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\vants.c(84) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\vants.c(136) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+vants.exe - 0 error(s), 4 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: zcs - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\zcs\zcs.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/zcs.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/zcs.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/zcs.pdb" /machine:I386 /out:"Release/zcs.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC263.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/zcs.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\zcs.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC263.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC264.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/zcs.pdb" /machine:I386 /out:"Release/zcs.exe" 
+".\Release\zcs.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC264.TMP" 
+Compiling...
+zcs.c
+C:\My Documents\cbn\code\src\zcs.c(724) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+zcs.exe - 0 error(s), 1 warning(s)
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+--------------------Configuration: zcscup - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\zcscup\zcscup.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/zcscup.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/zcscup.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/zcscup.pdb" /machine:I386 /out:"Release/zcscup.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC290.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/zcscup.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\zcscup.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC290.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPC291.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/zcscup.pdb" /machine:I386 /out:"Release/zcscup.exe" 
+".\Release\zcscup.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC291.TMP" 
+Compiling...
+zcscup.c
+C:\My Documents\cbn\code\src\zcscup.c(770) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+zcscup.exe - 0 error(s), 1 warning(s)

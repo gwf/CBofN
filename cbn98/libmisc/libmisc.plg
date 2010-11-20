@@ -1,0 +1,45 @@
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPC114.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\misc.c"
+"C:\My Documents\cbn\code\src\pgmplot.c"
+"C:\My Documents\cbn\code\cbn98\libmisc\plot.cpp"
+"C:\My Documents\cbn\code\src\psplot.c"
+"C:\My Documents\cbn\code\src\rawplot.c"
+"C:\My Documents\cbn\code\src\winplot.cpp"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC114.TMP" 
+Creating command line "link.exe -lib /nologo /out:"Release\libmisc.lib"  ".\Release\misc.obj" ".\Release\pgmplot.obj" ".\Release\plot.obj" ".\Release\psplot.obj" ".\Release\rawplot.obj" ".\Release\winplot.obj"" 
+Compiling...
+misc.c
+pgmplot.c
+plot.cpp
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(186) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(187) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(198) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(199) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(200) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(201) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(227) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(227) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(237) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(238) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(239) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+C:\My Documents\cbn\code\cbn98\libmisc\..\..\src\plot.c(240) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+psplot.c
+rawplot.c
+winplot.cpp
+Creating library...
+
+
+
+libmisc.lib - 0 error(s), 12 warning(s)

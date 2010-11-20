@@ -1,0 +1,49 @@
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP3261.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\winplot.cpp"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP3261.TMP" 
+Creating command line "link.exe -lib /nologo /out:"Release\libmisc.lib"  ".\Release\misc.obj" ".\Release\pgmplot.obj" ".\Release\plot.obj" ".\Release\psplot.obj" ".\Release\rawplot.obj" ".\Release\winplot.obj"" 
+Compiling...
+winplot.cpp
+Creating library...
+--------------------Configuration: ifs - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\ifs\ifs.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/ifs.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/ifs.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ifs.pdb" /machine:I386 /out:"Release/ifs.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP3293.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/ifs.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\ifs.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP3293.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSP3294.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ifs.pdb" /machine:I386 /out:"Release/ifs.exe" 
+".\Release\ifs.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP3294.TMP" 
+Compiling...
+ifs.c
+C:\My Documents\cbn\code\src\ifs.c(190) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\ifs.c(199) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+ifs.exe - 0 error(s), 2 warning(s)

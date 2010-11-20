@@ -1,0 +1,49 @@
+This directory contains the MS VC++ workspace and projects that I used
+to build the WIN32 version of the CBofN source code.  It's included
+here in case you want to hack on the source.
+
+This port would have been more or less impossible without the plot.h
+package that I lifted from http://club.ib.be/plot.htm, so kudos to the
+author.  I renamed the package to win98.cpp (in the src subdirectory)
+and changed only a small bit of it.  Most of my changes are noted with
+the 'GWF' tag.
+
+Right now, the weak spot in the port is the command-line interface.  I
+suspect that this is going to throw some Windows users.  Perhaps in a
+later release I'll be able to put in a basic GUI similar to what is
+found in the Java applets.
+
+NB: The actual size of the plot window is determined by the environment
+variables CBNWIDTH and CBNHEIGHT.  The default values are 640 and 480,
+respectively.  To change them, type under DOS:
+
+  set CBNWIDTH=1024
+  set CBNHEIGHT=768
+
+(as an example) and make sure that you run the program from the same
+DOS shell so that the environment variables are passed to the program.
+
+When you use a program's -width and -height command-line switches, the
+code will center the graphics in the window if the command-line values
+are smaller than the environment values.  But if they are larger, then
+they will be linearly rescaled.  Note also that the programs now honor
+the -mag switch, which can be used to get fat pixels.
+
+[ Yes, this is a bit ugly, but there doesn't seem to be an elegant way
+  to have the Windows driver honor the command-line switches.  The
+  problem is that if no switches are used, the plot sizes should default
+  to the values in the main() function.  But main() is not called until
+  after WinMain (which does the graphics stuff), so I have a chicken
+  and egg scenario.  Anyone have a better idea that doesn't involve a
+  major rewrite of all of the code? ]
+
+The default -term value is "Win" which is a simple color map.  Using
+a -term of "win" will give a grayscale map.  Note that in the color
+map the first color is always black, but every other color is bright.
+This is necessary for the fractal programs to produce reasonable
+graphics output.
+
+Have fun!
+
+-- GWF
+

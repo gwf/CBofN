@@ -1,0 +1,49 @@
+1998-12-17  Gary William Flake  <flake@godel.scr.siemens.com>
+
+	* (VERSION) 2.1
+	
+	* (assoc.c, ca.c, misc.c, misc.h, plot.c, stutter.c) minor changes
+	in source by Mike Miller to mesh in the new Mac plot driver.
+
+	* (macplot.c) new Mac driver by Mike Miller.  Thanks Mike.
+
+1998-10-23  Gary William Flake  <flake@godel>
+
+	* (VERSION) 2.0
+
+	* (README) updates for WIN32 crud.
+	
+	* (cbn98) subdiractory structure contains workspace and project
+	files to maintain code under MS VC.  Note to myself: have I sold
+	my soul?
+
+	* (diffuse.c) now finishes when growth hits edge.  Otherwise,
+	statistics get messed up and new growth beyond edge is extremely
+	non-random.
+
+	* (ALL) changed some default settings so that no command-line
+	options typically do The Right Thing.
+	
+	* (winplot.cpp, win98.cpp) now have support for WIN32 graphics
+	driver.  Why does this make me feel cheap?
+	
+	* (plot.c) made plot_mag belong to plot.c.  Now X11 and future
+	WIN32 drivers reference it externally.	
+
+	* (Makefile) yeah, it's extremely convoluted.  Deal with it.
+
+1998-10-19  Gary William Flake  <flake@godel>
+
+	* (VERSION) 1.1.
+
+	* (x11xplot.c) added X11 graphics driver which is based on x11 but
+	works in color.  Color map is made from shifting hue from 0 to 360
+	degress, with saturation and brightness set to 100 percent.
+	
+	* (ALL) reorganized distribution to have cleaner subdirectory
+	structure.
+
+1998-8-1  Gary William Flake  <flake@turing>
+
+	* (VERSION) 1.0.
+

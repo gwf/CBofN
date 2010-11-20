@@ -1,0 +1,48 @@
+#!/bin/sh
+
+data="data/ifscma.txt"
+prog="$0"
+tmp="/tmp/ifscma.$$"
+
+####
+
+usage () {
+  echo "usage: $prog [ -ifs | -cma ] name [ other arguments ]"
+  echo "       where name is one of: "
+  grep "{" "$data" | awk '{ print $1 }' | fmt -50 \
+    | awk '{ print "                              ", $0 }'
+  exit 1
+}
+
+####
+
+if [ $# -lt 2 ]; then
+  usage
+fi
+
+type=$1
+name=$2
+shift; shift
+
+if [ "X$type" = "X-ifs" ]; then
+  slave=bin/ifs
+elif [ "X$type" = "X-cma" ]; then
+  slave=bin/mrcm
+else
+  usage
+fi
+
+sed -n "/^$name *{ *$/,/^ *} *$/p" < "$data" > "$tmp".1
+sz=`cat "$tmp".1 | wc -l | awk '{ print $1 - 2 }'`
+
+if [ "$sz" -lt 1 ]; then
+  usage
+fi
+
+cat "$tmp".1 | tail +2 | head -"$sz" > "$tmp".2
+
+cat "$tmp".2 | "$slave" "$@"
+
+rm -f "$tmp".1 "$tmp.2"
+
+

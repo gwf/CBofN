@@ -1,0 +1,14 @@
+# Woods1 -- from Stewart Wilson's "ZCS: A Zeroth Level Classifier
+#           System"
+#
+# GWF: we don't need to draw an elaborate version of woods1 since
+# it will just wrap around in the ZCS program.
+#
+# Width and Height
+5 5
+
+.....
+.OOF.
+.OOO.
+.OOO.
+.....

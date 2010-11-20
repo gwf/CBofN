@@ -1,0 +1,45 @@
+Hi Gary:
+
+Here's some quick notes on the source code changes I made for the
+Macintosh port.
+
+1.  I used conditional compiles of the form
+
+#if __dest_os == __mac_os
+#else
+#endif
+
+since this is what Metrowerks CodeWarrior uses in their system header files.
+
+2.  Only the following files were changed:
+
+	assoc.c
+	ca.c
+	macplot.c (new)
+	misc.h
+	misc.c
+	plot.c
+	stutter.c
+
+Scan for "MRM" in the source - this marks all changes I made.
+
+3.  Mac details:
+
+    assoc and ca needed changes to prevent printf output during
+    plotting - I played with it but it was easiest to just take
+    them out.
+    
+    stutter needed a strdup (believe it or not) and a fix to a
+    macro.
+    
+    plot and macplot changed as would be expected; I wrote 2
+    different init routines (for color or gray-scale Mac plotting
+    devices, "Mac" or "mac"), and shared the other plot routines.
+    
+    misc.h and misc.c added some platform-specific stuff, including
+    the console interface (one line of code, gotta love it), and the
+    need to #include "string.h".
+
+Hope this effort leads to widespread Mac CBN experimentation!
+
+Mike

@@ -1,0 +1,41 @@
+--------------------Configuration: libmisc - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\libmisc\libmisc.dsp", at root.
+Active configuration is Win32 (x86) Static Library (based on Win32 (x86) Static Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Browser Database Maker" with flags "/nologo /o"Release/libmisc.bsc" "
+			"Library Manager" with flags "/nologo /out:"Release\libmisc.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP1234.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libmisc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\winplot.cpp"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP1234.TMP" 
+Creating command line "link.exe -lib /nologo /out:"Release\libmisc.lib"  ".\Release\misc.obj" ".\Release\pgmplot.obj" ".\Release\plot.obj" ".\Release\psplot.obj" ".\Release\rawplot.obj" ".\Release\winplot.obj"" 
+Compiling...
+winplot.cpp
+Creating library...
+--------------------Configuration: mrcm - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\mrcm\mrcm.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/mrcm.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/mrcm.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mrcm.pdb" /machine:I386 /out:"Release/mrcm.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP1291.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mrcm.pdb" /machine:I386 /out:"Release/mrcm.exe" 
+".\Release\mrcm.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP1291.TMP" 
+Linking...
+
+
+
+mrcm.exe - 0 error(s), 0 warning(s)

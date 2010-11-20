@@ -1,0 +1,29 @@
+--------------------Configuration: henbif - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\henbif\henbif.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/henbif.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/henbif.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/henbif.pdb" /machine:I386 /out:"Release/henbif.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP40E5.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/henbif.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\henbif.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP40E5.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSP40E6.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/henbif.pdb" /machine:I386 /out:"Release/henbif.exe" 
+".\Release\henbif.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP40E6.TMP" 
+Compiling...
+henbif.c
+C:\My Documents\cbn\code\src\henbif.c(142) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+henbif.exe - 0 error(s), 1 warning(s)

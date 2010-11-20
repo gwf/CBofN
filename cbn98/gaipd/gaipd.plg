@@ -1,0 +1,35 @@
+--------------------Configuration: gaipd - Win32 Release--------------------
+Begining build with project "C:\My Documents\cbn\code\cbn98\gaipd\gaipd.dsp", at root.
+Active configuration is Win32 (x86) Console Application (based on Win32 (x86) Console Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gaipd.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/gaipd.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gaipd.pdb" /machine:I386 /out:"Release/gaipd.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP2C1.TMP" with contents </nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/gaipd.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\My Documents\cbn\code\src\gaipd.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP2C1.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSP02C2.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:no /pdb:"Release/gaipd.pdb" /machine:I386 /out:"Release/gaipd.exe" 
+".\Release\gaipd.obj"
+"\My Documents\cbn\code\cbn98\libmisc\Release\libmisc.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP02C2.TMP" 
+Compiling...
+gaipd.c
+C:\My Documents\cbn\code\src\gaipd.c(138) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gaipd.c(140) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gaipd.c(140) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gaipd.c(143) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gaipd.c(143) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gaipd.c(146) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gaipd.c(349) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+C:\My Documents\cbn\code\src\gaipd.c(404) : warning C4035: 'main' : no return value
+Linking...
+
+
+
+gaipd.exe - 0 error(s), 8 warning(s)

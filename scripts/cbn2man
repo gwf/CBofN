@@ -1,0 +1,219 @@
+#!/usr/bin/perl
+
+# Ugly perl script to convert the example source code from "The
+# Computational Beauty of Nature" to man pages.
+#
+# Written by Gary William Flake
+#
+# Permission granted for any use.  Knock yourself out.
+#
+######################################################################
+
+$cbn2man = "cbn2man";
+
+######################################################################
+
+# Returns the first location in a list of the occurance of a pattern.
+
+sub first_loc {
+  local($where);
+  local($pat, *array) = ($_[0], $_[1]);
+  undef $where;
+  for ($[ .. $#array) {
+    $where = $_, last if $array[$_] =~ /$pat/;
+  }
+  $where;
+}
+
+######################################################################
+
+sub first_loc_from {
+  local($where);
+  local($pat, $beg, *array) = ($_[0], $_[1], $_[2]);
+  undef $where;
+  for ($beg .. $#array) {
+    $where = $_, last if $array[$_] =~ /$pat/;
+  }
+  $where;
+}
+
+######################################################################
+
+# Grab each option from the options list and pretty print
+
+sub do_synopsis {
+  local($optname, $opttype);
+
+  print OUTFILE ".SH SYNOPSIS\n.PD 0\n.TP\n.B $prog\ ";
+  print OUTFILE "\\fB-help\n.LP\n\\ \\ or\n.TP\n.B $prog\n\\fB";
+  for(@opts) {
+    $optname = $_;
+    $optname =~ s/\s*\{\s*\"([^\"]*)\",\s*([^,]*).*/\1/g;
+    chop($optname);
+    $opttype = $_;
+    $opttype =~ s/\s*\{\s*\"([^\"]*)\",\s*([^,]*).*/\2/g;
+    chop($opttype);
+    $opttype =~ s/OPT_INT/ \\fIinteger\\fP/g;
+    $opttype =~ s/OPT_DOUBLE/ \\fIdouble\\fP/g;
+    $opttype =~ s/OPT_STRING/ \\fIstring\\fP/g;
+    $opttype =~ s/OPT_SWITCH//g;
+    $opttype =~ s/OPT_OTHER/ \\fI\\.\\.\\.\\fP/g;
+    print OUTFILE "[\\$optname","$opttype]\n";
+  }
+  print OUTFILE ".PD 1\n";
+}
+
+######################################################################
+
+# Grab the help string in print it as a description
+
+sub do_description {
+  local($beg, $end, @help);
+
+  $beg = &first_loc('char\s*help_string', *rest);
+  $end = &first_loc_from('\";', $beg + 1, *rest);
+  @help = @rest[$beg .. $end];
+  $help[0] =~ s/\s*char\s*help_string[^\"]*\"(.*)/\1/g;
+  $help[$#help] =~ s/([^\"]*)\".*/\1/g;
+  for (@help) {
+    s/\\$//g;
+  }
+  if($help[0] =~ /^\s*$/) {
+    @help = @help[1 .. $#help];
+  }
+  if($help[$#help] =~ /^\s*$/) {
+    @help = @help[0 .. $#help - 1];
+  }
+  print OUTFILE ".SH DESCRIPTION\n";
+  print OUTFILE @help;
+}
+
+######################################################################
+
+# Pretty-print out each option description seperately.
+
+sub do_options {
+  local($optname, $opttype, $opthelp);
+
+  print OUTFILE ".SH OPTIONS\n";
+  for (@opts) {
+    $optname = $_;
+    $optname =~ s/\s*\{\s*\"([^\"]*)\",\s*([^,]*).*/\1/g;
+    chop($optname);
+
+    $opttype = $_;
+    $opttype =~ s/\s*\{\s*\"([^\"]*)\",\s*([^,]*).*/\2/g;
+    chop($opttype);
+    $opttype =~ s/OPT_INT/\\ \\fIinteger\\fP/g;
+    $opttype =~ s/OPT_DOUBLE/\\ \\fIdouble\\fP/g;
+    $opttype =~ s/OPT_STRING/\\ \\fIstring\\fP/g;
+    $opttype =~ s/OPT_SWITCH//g;
+    $opttype =~ s/OPT_OTHER/\\ \\fI\\.\\.\\.\\fP/g;
+    
+    $opthelp = $_; 
+    $opthelp =~ s/\s*\{\s*\"[^\"]*\"[^\"]*\"([^\"]*)\".*/\1/g;
+
+    print OUTFILE ".IP \\fB\\$optname","$opttype\n";
+    print OUTFILE $opthelp;
+  }
+}
+
+######################################################################
+
+# Pretty-print any remaining section except NAME and NOTES.
+
+sub do_sections {
+  local($beg, $end, $skip);
+  
+  $skip = 0;
+  for (@header) {
+    if($skip == 1) {
+      if(/^[A-Z][A-Z]*/) {
+	$skip = 0;
+      }
+    }
+    if(/^[A-Z][A-Z]*/) {
+      if(/^NAME/ || /^NOTES/) {
+	$skip = 1;
+      }
+      else {
+	print OUTFILE ".SH $_";
+      }
+    }
+    elsif ($skip == 0) {
+      s/^  //g;
+      print OUTFILE $_;
+    }
+  }
+}
+
+######################################################################
+
+sub main {
+
+  open(INFILE, "-");
+  open(OUTFILE, ">-");
+  
+  @lines = <INFILE>;
+  close(INFILE);
+
+  # Get the first header comment and clean it up.
+  $beg = &first_loc('^/\*', *lines);
+  $end = &first_loc_from('^ \*/', $beg + 1, *lines);
+  @header = @lines[$beg .. $end - 1];
+  $header[0] =~ s/^\/\* //g;
+  for (@header[1 .. $#header]) {
+    s/^ \* //g;
+  }
+  
+  # Get everything but the header;
+  @rest = @lines[$end + 1 .. $#lines];
+
+  # Get the program name and description.
+  $beg = &first_loc('^NAME', *header);
+  $progline = $header[$beg + 1];
+  $progline =~ s/ *([^ ].*)/\1/g;
+  $prog = $progline;
+  $prog =~ s/([^ ]*) .*/\1/g;
+  $bigprog = $prog;
+  $bigprog =~ tr/[a-z]/[A-Z]/;
+  $progline =~ s/-/\\-/g;
+  chop($prog);
+  chop($bigprog);
+
+  # Isolate the command line options and strip preproccesor directives
+  $beg = &first_loc('^\s*OPTION', *rest);
+  $end = &first_loc_from('^\s*{\s*NULL,\s*OPT_NULL', $beg + 1, *rest);
+  @opts = @rest[$beg + 1 .. $end - 1];
+  for (@opts) {
+    s/^\s*#.*//g;
+  }
+  # Now, join continuation strings. 
+  chop @opts;
+  $opts = join('', @opts);
+  $opts =~ s/\"\s*\"//g;
+  @opts = split(/\},/, $opts);
+  for (@opts) {
+    $_ = "$_\n";
+  }
+
+  print OUTFILE ".TH $bigprog 1\n";
+  print OUTFILE ".SH NAME\n.PD 0\n.TP\n$progline.PD 1\n";
+
+  &do_synopsis;
+  &do_description;
+  &do_options;
+  &do_sections;
+
+  close(OUTFILE);
+}
+
+######################################################################
+
+# Is it obvious that I am a C programmer?
+
+&main;
+exit 0;
+
+######################################################################
+
