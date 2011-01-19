@@ -1,3 +1,9 @@
+2011-01-19  Gary William Flake  <gary@Mercury.local>
+
+	* stutter.c - applied some patches from Linus Nilsson
+	<lajnold@acc.umu.se> that fixed issues in the macros that had to
+	do with modern compiles wanting proper LVALs for assignments.
+
 1998-12-17  Gary William Flake  <flake@godel.scr.siemens.com>
 
 	* (VERSION) 2.1

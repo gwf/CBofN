@@ -96,7 +96,7 @@ typedef struct CELL_STRUCT {
 
 /* Handy macros.  Car and cdr are for lists, name is for atoms, and
    func is for sfuncs and vfuncs.  Lambdas use the car and cdr for
-   the paramter list and the body. */
+   the parameter list and the body. */
 
 #define cell_car(c)      ((CELL *)(c)->car)
 #define cell_cdr(c)      ((CELL *)(c)->cdr)
@@ -110,6 +110,12 @@ typedef struct CELL_STRUCT {
 #endif
 /*MRM end*/
 #define cell_mark(c)     ((c)->mark)
+
+#define cell_car_assign(c, v)  (((c)->car) = v)
+#define cell_cdr_assign(c, v)  (((c)->cdr) = v)
+#define cell_name_assign(c, v) (((c)->car) = v)
+#define cell_func_assign(c, v) (((c)->car) = v)
+#define cell_type_assign(c, v) (((c)->type) = v)
 
 
 /* Global cells that we'll need at some point.  Binding_list holds all
@@ -186,7 +192,7 @@ void garbage_collect(void)
     mark(protect_table[i]);
   for(cell = heap, i = 0; i < heap_size; cell++, i++) {
     if(!cell_mark(cell)) {
-      cell_car(cell) = free_list;
+      cell_car_assign(cell, free_list);
       free_list = cell;
       count++;
     }
@@ -205,7 +211,7 @@ void garbage_collect(void)
 
 CELL *new_cell(CELL_TYPE type)
 {
-  static init = 0;
+  static int init = 0;
   CELL *cell;
   int i;
 
@@ -213,16 +219,16 @@ CELL *new_cell(CELL_TYPE type)
     init = 1;
     free_list = heap = xmalloc(sizeof(CELL) * heap_size);
     for(cell = heap, i = 0; i < heap_size - 1; cell++, i++)
-      cell_car(cell) = cell + 1;
-    cell_car(cell) = NULL;
+      cell_car_assign(cell, cell + 1);
+    cell_car_assign(cell, NULL);
     protect_table = xmalloc(sizeof(CELL *) * protect_size);
   }
   if(free_list == NULL)
     garbage_collect();
   cell = free_list;
   free_list = cell_car(free_list);
-  cell_type(cell) = type;
-  cell_car(cell) = cell_cdr(cell) = NULL;
+  cell_type_assign(cell, type);
+  cell_car_assign(cell, cell_cdr_assign(cell, NULL));
   cell_mark(cell) = 0;
   return(cell);
 }
@@ -246,14 +252,14 @@ CELL *new_atom(char *name)
   }
   /* Not found so insert it in front. */
   current = new_cell(CELL_LIST);
-  cell_car(current) = atom = new_cell(CELL_ATOM);
-  cell_cdr(current) = NULL;
-  cell_name(atom) = strdup(name);
+  cell_car_assign(current, atom = new_cell(CELL_ATOM));
+  cell_cdr_assign(current, NULL);
+  cell_name_assign(atom, strdup(name));
   protect(current);
   list = new_cell(CELL_LIST);
   unprotect();
-  cell_car(list) = current;
-  cell_cdr(list) = binding_list;
+  cell_car_assign(list, current);
+  cell_cdr_assign(list, binding_list);
   binding_list = list;
   return(atom);
 }
@@ -340,11 +346,11 @@ CELL *cons(CELL *a, CELL *b)
   protect(a); protect(b);
   c = new_cell(CELL_LIST);
   unprotect(); unprotect();
-  cell_car(c) = a;
+  cell_car_assign(c, a);
   if(b == nil_cell)
-    cell_cdr(c) = NULL;
+    cell_cdr_assign(c, NULL);
   else
-    cell_cdr(c) = b;
+    cell_cdr_assign(c, b);
   return(c);
 }
 
@@ -402,7 +408,7 @@ CELL *set(CELL *a, CELL *b)
   current = binding_list;
   while(current != nil_cell && current != NULL) {
     if(cell_car(cell_car(current)) == a) {
-      cell_cdr(cell_car(current)) = b;
+      cell_cdr_assign(cell_car(current), b);
       return(b);
     }
     current = cell_cdr(current);
@@ -411,13 +417,13 @@ CELL *set(CELL *a, CELL *b)
   protect(a); protect(b);
   current = new_cell(CELL_LIST);
   unprotect(); unprotect();
-  cell_car(current) = a;
-  cell_cdr(current) = b;
+  cell_car_assign(current, a);
+  cell_cdr_assign(current, b);
   protect(current);
   list = new_cell(CELL_LIST);
   unprotect();
-  cell_car(list) = current;
-  cell_cdr(list) = binding_list;
+  cell_car_assign(list, current);
+  cell_cdr_assign(list, binding_list);
   binding_list = list;
   return(b);
 }
@@ -455,8 +461,8 @@ CELL *lambda(CELL *expr)
   protect(expr);
   ufunc = new_cell(CELL_LAMBDA);
   unprotect();
-  cell_car(ufunc) = car(expr, NULL);
-  cell_cdr(ufunc) = car(cdr(expr, NULL), NULL);
+  cell_car_assign(ufunc, car(expr, NULL));
+  cell_cdr_assign(ufunc, car(cdr(expr, NULL), NULL));
   if(cell_car(ufunc) == error_cell || cell_cdr(ufunc) == error_cell)
     return(error_cell);
   c = cell_car(ufunc);
@@ -566,8 +572,8 @@ CELL *eval_lambda(CELL *expr, CELL *func)
     bind = new_cell(CELL_LIST);
     unprotect(); /* cell */
     unprotect(); /* blist */
-    cell_car(bind) = cell_car(argn);
-    cell_cdr(bind) = cell;
+    cell_car_assign(bind, cell_car(argn));
+    cell_cdr_assign(bind, cell);
     blist = cons(bind, blist);
     count++;
     argn = cell_cdr(argn);
@@ -699,29 +705,29 @@ void initialize(void)
   set(error_cell, error_cell);
 
   set(new_atom("car"), c = new_cell(CELL_VFUNC));
-  cell_func(c) = car;
+  cell_func_assign(c, car);
 
   set(new_atom("cdr"), c = new_cell(CELL_VFUNC));
-  cell_func(c) = cdr;
+  cell_func_assign(c, cdr);
 
   set(new_atom("cons"), c = new_cell(CELL_VFUNC));
-  cell_func(c) = cons;
+  cell_func_assign(c, cons);
 
   set(new_atom("set"), c = new_cell(CELL_VFUNC));
-  cell_func(c) = set;
+  cell_func_assign(c, set);
 
   set(new_atom("equal"), c = new_cell(CELL_VFUNC));
-  cell_func(c) = equal;
+  cell_func_assign(c, equal);
 
   quote_cell = new_atom("quote");
   set(quote_cell, c = new_cell(CELL_SFUNC));
-  cell_func(c) = quote;
+  cell_func_assign(c, quote);
 
   set(new_atom("lambda"), c = new_cell(CELL_SFUNC));
-  cell_func(c) = lambda;
+  cell_func_assign(c, lambda);
 
   set(new_atom("if"), c = new_cell(CELL_SFUNC));
-  cell_func(c) = lisp_if;
+  cell_func_assign(c, lisp_if);
 
   scan = scan_init(stdin, "()'", " \t", ";");
 }
