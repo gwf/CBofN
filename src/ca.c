@@ -98,7 +98,7 @@ char *dorules(int states, int radius, int sq, double *lambda, char *rules)
 
   /* Simple sanity check. */
   if(rules && strlen(rules) != len) {
-    fprintf(stderr, "Rule length should be %d not %d\n", len, strlen(rules));
+    fprintf(stderr, "Rule length should be %d not %lu\n", len, strlen(rules));
     exit(1);
   }
 

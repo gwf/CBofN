@@ -39,24 +39,10 @@ static char *term_default = "vga";
 #endif
 #endif
 
-/*MRM begin*/
-#if __dest_os == __mac_os
-PLOTPROTOS(mac)
-PLOTPROTOS(Mac)
-static char *term_default = "Mac";
-#endif
-/*MRM end*/
-
 #ifndef PLOTX11
 #ifndef PLOTVGA
 #ifndef WIN32
-/*MRM begin*/
-#if __dest_os != __mac_os
-/*MRM end*/
 static char *term_default = "pgm";
-/*MRM begin*/
-#endif
-/*MRM end*/
 #endif
 #endif
 #endif
@@ -125,22 +111,6 @@ void plot_init(int width, int height, int levels, char *term)
     _plot_finish = Winplot_finish;
   }
 #endif
-/*MRM begin*/
-#if __dest_os == __mac_os
-  else if(strcmp(term, "mac") == 0) {
-    _plot_init = macplot_init;
-    _plot_point = Macplot_point;
-    _plot_line = Macplot_line;
-    _plot_finish = Macplot_finish;
-  }
-  else if(strcmp(term, "Mac") == 0) {
-    _plot_init = Macplot_init;
-    _plot_point = Macplot_point;
-    _plot_line = Macplot_line;
-    _plot_finish = Macplot_finish;
-  }
-#endif
-/*MRM end*/
 #ifdef PLOTVGA
   else if(strcmp(term, "vga") == 0) {
     _plot_init = vgaplot_init;

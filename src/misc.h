@@ -22,6 +22,7 @@ extern "C" {
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits.h>
+#include <string.h>
 
 #ifdef sun
 long lrand48();
@@ -45,20 +46,12 @@ void srand48(long);
         int i = getchar(); \
         _exit(val); \
   } while(0)
+#ifndef M_PI
 #define M_PI 3.14159265358979323846
+#endif
 #endif
 #endif
 
-/*MRM begin*/
-#if __dest_os == __mac_os
-#include <string.h>
-#include <math.h>
-#include <console.h>
-#define random rand
-#define srandom srand
-#define M_PI 3.14159265358979323846
-#endif
-/*MRM end*/
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 

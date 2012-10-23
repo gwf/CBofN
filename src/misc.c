@@ -31,7 +31,7 @@ static void format_string(char *str, int leftind, int rightind, int firstind)
   for(i = 0; i < firstind; i++)
     indent[i] = ' ';
   indent[firstind] = 0;
-  fprintf(stderr, indent);
+  fputs(indent, stderr);
   for(i = 0; i < leftind; i++)
     indent[i] = ' ';
   indent[leftind] = 0;
@@ -41,7 +41,7 @@ static void format_string(char *str, int leftind, int rightind, int firstind)
     if(start >= len) break;
     if(!first) {
       while(str[start] == ' ') start++;
-      fprintf(stderr, indent);
+      fputs(indent, stderr);
       stop = start + (80 - leftind - rightind);
     }
     else
@@ -74,7 +74,7 @@ static void display_options(char **argv, OPTION *options, char *help)
   
   fprintf(stderr, "Usage: %s [ options ]\n\n", argv[0]);
   format_string(help, HELP_INDENT, HELP_INDENT, HELP_INDENT);
-  fprintf(stderr, "\nOptions with defaults in parentheses are:\n\n");
+  fputs("\nOptions with defaults in parentheses are:\n\n", stderr);
   
   i = maxlen = 0;
   while(options[i].name != NULL) {
@@ -140,14 +140,6 @@ void bad_option(char **argv, int badopt)
 void get_options(int argc, char **argv, OPTION *options, char *help)
 {
   int i, j, found;
-  
-/*MRM begin*/
-
-#if __dest_os == __mac_os
-argc = ccommand (&argv);
-#endif
-
-/*MRM end*/
 
   /* For each argument in the command line.
    */
@@ -333,7 +325,7 @@ void *xmalloc(size_t bytes)
   void *ptr;
 
   if((ptr = malloc(bytes)) == NULL) {
-    fprintf(stderr, "malloc failed to get %d bytes.\n", bytes);
+    fprintf(stderr, "malloc failed to get %lu bytes.\n", bytes);
     exit(1);
   }
   return(ptr);

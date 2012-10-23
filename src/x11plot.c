@@ -163,18 +163,11 @@ void x11plot_point(int i, int j, int val)
 
 void x11plot_line(int i, int j, int k, int l, int val)
 {
-  int grayval, ii, jj;
+  int grayval, ii;
 
   val = (val < 0) ? 0 : (val >= x11plot_levels) ? x11plot_levels : val;
   grayval = ((double)val / x11plot_levels) * (GRAY_LEVELS - 1) + 0.5;
   XSetForeground(x_display, x_gc, x_grays[grayval]);
-#if 0
-  for(ii = 0; ii < plot_mag; ii++)
-    for(jj = 0; jj < plot_mag; jj++)
-      XDrawLine(x_display, x_window, x_gc,
-                i * plot_mag + ii, j * plot_mag + jj,
-                k * plot_mag + ii, l * plot_mag + jj);
-#else
   if(plot_mag == 1)
     XDrawLine(x_display, x_window, x_gc, i, j, k, l);
   else {
@@ -193,7 +186,6 @@ void x11plot_line(int i, int j, int k, int l, int val)
       }
     }
   }
-#endif
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

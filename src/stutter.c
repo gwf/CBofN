@@ -169,7 +169,7 @@ void protect(CELL *cell)
     protect_table = realloc(protect_table,
                             sizeof(CELL *) * protect_size * 2);
     if(protect_table == NULL) {
-      fprintf(stderr, "protect: unable to realloc %d bytes.\n",
+      fprintf(stderr, "protect: unable to realloc %lu bytes.\n",
               sizeof(CELL *) * protect_size * 2);
       exit(1);
     }
