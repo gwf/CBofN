@@ -264,7 +264,7 @@ static int int2pos[4][2] = { { -1, 0 }, { -1, 1 }, { 0, 1 }, { 1, 1 } };
     #0###0######-1##############-1#  nonsense numbers
      0   1       1               6
      1  -1       7               0
-     1   0       4               4
+     1   0       4               3
      1   1       2               5
 
    In a nutshell, POS2INT() gives us bit indices into a byte that can
